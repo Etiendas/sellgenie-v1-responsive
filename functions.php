@@ -324,7 +324,7 @@ function control_login_view() {
 	$html = "<span class='userlogin'>\r\n";
 	
 	if (is_user_logged_in()) {
-		$html .= "\tWelcome back, " . $current_user->display_name . "! <a href='". wp_logout_url() . "'>Not " . $current_user->display_name . "?</a>\r\n";
+		$html .= "\t<span class='icon-users'>&nbsp;</span>Welcome back, " . $current_user->display_name . "! <a href='". wp_logout_url() . "'>Not " . $current_user->display_name . "?</a>\r\n";
 	} else {
 		$html .= "\tDon't forget to ";
 		$html .= "<a href='" . wp_login_url() . "' target='_blank'>Login</a> or ";

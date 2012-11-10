@@ -623,7 +623,6 @@ TYPOGRAPHY
   speak: none;
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
-  font-size: 20px;
   line-height: 1;
   padding-top: 2px;
 }
@@ -1431,6 +1430,7 @@ h5,
   padding: 0;
   display: inline;
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.2);
+  font-size: 16px;
 }
 .userlogin a {
   color: #ffffff;
@@ -1621,7 +1621,7 @@ WELL
   background: url(../images/mid-bg.png) bottom repeat-x;
   border-bottom: 1px solid #404b50;
 }
-.well p {
+.well p.padded {
   font-size: 1.025em;
   padding: 2em;
   color: #ffffff;
@@ -2272,7 +2272,7 @@ you can add resource intensive styles.
     background: url(../images/mid-bg.png) bottom repeat-x;
     border-bottom: 1px solid #404b50;
   }
-  .well p {
+  .well p.padded {
     font-size: 1.025em;
     padding: 1em 1.25em 2em;
     color: #ffffff;
@@ -2346,10 +2346,6 @@ you can add resource intensive styles.
   SIDEBARS & ASIDES
   *********************/
   .widgettitle {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    -webkit-box-shadow: 0 1px 0 1px rgba(255, 255, 255, 0.8);
-    -moz-box-shadow: 0 1px 0 1px rgba(255, 255, 255, 0.8);
-    box-shadow: 0 1px 0 1px rgba(255, 255, 255, 0.8);
     margin-bottom: 0.75em;
     color: #99acb6;
   }

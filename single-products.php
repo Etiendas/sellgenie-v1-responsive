@@ -3,6 +3,7 @@
 ?>
 			
 			<div id="content">
+<!--
 				
 			<section class="products-head wrap clearfix">
 
@@ -13,7 +14,8 @@
 					<h4 class="widgettitle">Product Information</h4>
 				</div>
 
-			</section>
+			</section>-->
+
 
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			
@@ -22,15 +24,6 @@
 					<div id="main" class="eightcol first clearfix" role="main">
 					
 							<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
-						
-								<header class="article-header">
-									<h1 class="entry-title single-title" itemprop="headline">
-										<?php the_title(); ?>
-									<span class="byline">
-										<?php _e("Added", "bonestheme"); ?> <time class="updated" datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time> 
-									</span>							
-									</h1>
-								</header> <!-- end article header -->
 								
 								<section class="entry-content clearfix" itemprop="articleBody">
 										<?php the_content(); ?>
@@ -45,14 +38,18 @@
 								</footer> <!-- end article footer -->
 								
 								<?php //comments_template(); ?>
-					
+		    						
+								<span class="byline">
+									<?php _e("Added", "bonestheme"); ?> <time class="updated" datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time> 
+								</span>		
+												
 							</article> <!-- end article -->
 			
 							</div> <!-- end #main -->
-		    
+					
 							<?php get_sidebar(); ?>
-		
-						</div> <!-- end #inner-content -->					
+
+							</div> <!-- end #inner-content -->					
 						<?php endwhile; ?>			
 					
 						<?php else : ?>

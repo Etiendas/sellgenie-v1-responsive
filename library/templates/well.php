@@ -1,9 +1,10 @@
 	<section class="well">
 		<div class="wrap clearfix">
 			<?php if (is_front_page()) {
-				echo "<p>\r\n";
+				echo "<p class='clearfix padded'>\r\n";
 				control_login_view();
 				bloginfo('description') . "\r\n";
+				echo "<a href='#' class='button blue-button icon-info' style='float: right; margin-top: 5px;'> Learn More</a>\r\n";
 				echo "</p>\r\n";
 			} ?>
 			
@@ -43,9 +44,9 @@
 	    	    <span><?php _e("Current Inventory:", "bonestheme"); ?></span> 
 	        </h1>
 	    <?php } elseif ( ('products' == get_post_type() && !is_front_page() )|| (is_single() && !is_front_page()) ) { ?>
-	        <h1 class="archive-title h2">
-	    	    <span><?php _e(control_login_view(), "bonestheme"); ?></span>
-	        </h1>
+						<?php global $post; ?>
+						<h1 class="h2"><?php the_title(); ?></h1>
+	    	    <p><?php _e(control_login_view(), "bonestheme"); ?></p>
 	    <?php } ?>    
 		</div>
 	</section>
