@@ -34,9 +34,14 @@ HEADER SYTLES
 *********************/
 
 .header {
+  position: fixed;
+  width: 100%;
+  z-index: 25;
   clear: both;
   background: @header;
   height: 45px;
+  margin-bottom: 45px;
+  .boxShadow(0,1px,7px,0,rgba(50,50,50,0.5));
   
   nav {
     padding-top: 5px;
@@ -46,6 +51,9 @@ HEADER SYTLES
     }
   }
 }
+  .nav-container {
+    padding-top: 45px;
+  }
 
 	#logo {}
 
@@ -172,11 +180,11 @@ WELL
   z-index: 20;
   display: block;
   height: 130px;
-  background: url(../images/mid-bg.png) repeat-x;
+  background: url(../images/mid-bg.png) bottom repeat-x;
   border-bottom: 1px solid darken(@sg-dblue, 10%);
   p {
     font-size: 1.025em;
-    padding: 2em;
+    padding: 1em 1.25em 2em;
     color: @white;
     text-shadow: -1px -1px 0 darken(@sg-dgold, 20%);
   }

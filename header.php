@@ -39,22 +39,19 @@
 			<header class="header" role="banner">
 			
 				<div id="inner-header" class="wrap clearfix">
-
 					<nav role="navigation">
 						<?php bones_main_nav(); ?>
 					</nav>
-					
 					<!-- to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> -->
 					<a href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/library/images/brand.png" /></a>
-					
+				
 					<!-- if you'd like to use the site description you can un-comment it below -->
-			
 				</div> <!-- end #inner-header -->
 			
 			</header> <!-- end header -->
-			<?php 
-			
-			if( is_front_page() ) : ?>
-			<?php get_template_part('library/templates/megaphone'); ?>
+			<section class='nav-container'>
+			<?php if( is_front_page() ) : ?>
+				<?php get_template_part('library/templates/megaphone'); ?>
 			<?php endif; ?>
-			<?php get_template_part('library/templates/well'); ?>
+				<?php get_template_part('library/templates/well'); ?>
+			</section>

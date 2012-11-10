@@ -316,4 +316,26 @@ $count = count($gallery);
 	
 }
 
+function control_login_view() {
+	global $current_user;
+	get_currentuserinfo();
+	
+	//$html = "<div>";
+	$html = "<span class='userlogin'>\r\n";
+	
+	if (is_user_logged_in()) {
+		$html .= "\tWelcome back, " . $current_user->display_name . "! <a href='". wp_logout_url() . "'>Not " . $current_user->display_name . "?</a>\r\n";
+	} else {
+		$html .= "\tDon't forget to ";
+		$html .= "<a href='" . wp_login_url() . "' target='_blank'>Login</a> or ";
+		$html .= "<a href='" . home_url() . "/wp-login.php?action=register' target='_blank'>Register Today</a>. Everyone needs a Genie in their pocket.";
+	}
+	
+	$html .= "</span>\r\n";
+	//$html .= "</div>\r\n";
+	
+	echo $html;
+	
+}
+
 ?>

@@ -45,7 +45,7 @@ $mz = 1;
 					    <?php endwhile; ?>	
 					
 			        <?php if (function_exists('bones_page_navi')) { ?>
-					            <?php bones_page_navi(); ?>
+			            <?php bones_page_navi(); ?>
 					        <?php } else { ?>
 					            <nav class="wp-prev-next">
 					                <ul class="clearfix">

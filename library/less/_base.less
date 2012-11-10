@@ -166,16 +166,40 @@ h5, .h5 {
 *********************/
 
 .header {
+/*
+  position: fixed;
+  width: 100%;
+  z-index: 25;*/
+
   background: @header;
-  
   nav {
     ul {
       margin: 0;
     }
   }
 }
+  .nav-container {
+    padding-top: none;
+  }
+
+  .userlogin {
+    color: @sg-gold;
+    margin: 0; padding: 0;
+    display: inline;
+    text-shadow: 1px 1px 0 rgba(255,255,255,0.2);
+    
+    a {
+      color: @white;
+      text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+      &:hover, &:focus {
+        color: @sg-gold;
+        text-shadow: 1px 1px 0 rgba(255,255,255,0.2);
+      }
+    }
+  }
 
 	#logo, .branding {
+	  float: left;
 	  margin: 0; padding: 0;
     font-size: 2em;
     font-weight: 400;
@@ -445,6 +469,40 @@ and moe scalable.
 		.size-large {}
 		.size-medium {}
 		.size-thumbnail {}
+/*********************
+MEGAPHONE
+*********************/
+
+.megaphone {
+  display: none;
+  img {
+    display: none;
+  }
+  p {
+    text-align: center;
+    font-size: 14px;
+    color: @sg-gold;
+  }
+}
+
+/*********************
+WELL
+*********************/
+.well {
+  position: relative;
+  z-index: 20;
+  display: block;
+  height: 130px;
+  background: url(../images/mid-bg.png) bottom repeat-x;
+  border-bottom: 1px solid darken(@sg-dblue, 10%);
+  p {
+    font-size: 1.025em;
+    padding: 2em;
+    color: @white;
+    text-shadow: -1px -1px 0 darken(@sg-dgold, 20%);
+  }
+  
+}
 
 /*********************
 08.A FEATURED
